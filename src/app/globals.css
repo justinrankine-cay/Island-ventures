@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --sand-50: #FDFAF4;
+  --sand-100: #F7EDD8;
+  --sand-200: #EDD9B0;
+  --sand-300: #DEC08A;
+  --sand-400: #CDA665;
+  --sand-500: #B8904A;
+  --sage-50: #F2F5F0;
+  --sage-100: #DCE8D8;
+  --sage-200: #B8D1B0;
+  --sage-300: #8FAF87;
+  --sage-400: #6A8E62;
+  --sage-500: #4E6F47;
+  --sage-600: #3A5235;
+  --dark-brown: #2C1A0E;
+  --medium-brown: #5C3D1E;
+  --background: var(--sand-50);
+  --foreground: var(--dark-brown);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Calendar overrides */
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  background: transparent !important;
+  font-family: inherit !important;
+}
+
+.react-calendar__tile {
+  border-radius: 8px !important;
+  padding: 0.75em 0.5em !important;
+  color: #2C1A0E !important;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #DCE8D8 !important;
+}
+
+.react-calendar__tile--active {
+  background-color: #6A8E62 !important;
+  color: white !important;
+}
+
+.react-calendar__tile--now {
+  background-color: #EDD9B0 !important;
+}
+
+.react-calendar__month-view__weekdays {
+  color: #5C3D1E !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.react-calendar__navigation button {
+  color: #2C1A0E !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  min-width: 44px !important;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #DCE8D8 !important;
+  border-radius: 8px !important;
+}
+
+.booked-tile {
+  background-color: #EDCECE !important;
+  color: #9B2020 !important;
+  cursor: not-allowed !important;
+  text-decoration: line-through !important;
+}
+
+.available-tile {
+  background-color: #DCE8D8 !important;
+  color: #3A5235 !important;
+}
+
+abbr {
+  text-decoration: none !important;
+}

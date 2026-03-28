@@ -1,0 +1,3 @@
+# Place your hero video here as hero.mp4
+# Recommended: a 1080p or 4K aerial/ocean video of the Cayman Islands
+# Tip: compress to ~10MB for fast loading using: ffmpeg -i input.mp4 -vcodec h264 -acodec aac -crf 28 hero.mp4
