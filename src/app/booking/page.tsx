@@ -97,14 +97,14 @@ function BookingForm() {
             style={{ background: "white", border: "1px solid var(--sand-200)", boxShadow: "0 2px 12px rgba(44,26,14,0.06)" }}
           >
             <div className="flex items-center gap-2 mb-5">
-              <CalendarDays size={20} style={{ color: "var(--sage-400)" }} />
-              <h2 className="text-lg font-bold" style={{ color: "var(--dark-brown)" }}>
+              <CalendarDays size={20} style={{ color: "var(--teal-500)" }} />
+              <h2 className="text-lg font-bold" style={{ color: "var(--navy)" }}>
                 Select a Date
               </h2>
             </div>
 
             {/* Legend */}
-            <div className="flex gap-5 mb-4 text-xs" style={{ color: "var(--medium-brown)" }}>
+            <div className="flex gap-5 mb-4 text-xs" style={{ color: "var(--mid)" }}>
               <span className="flex items-center gap-1.5">
                 <span className="inline-block w-3 h-3 rounded" style={{ background: "#DCE8D8" }} />
                 Available
@@ -138,10 +138,10 @@ function BookingForm() {
               style={{ background: "white", border: "1px solid var(--sand-200)", boxShadow: "0 2px 12px rgba(44,26,14,0.06)" }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <Clock size={18} style={{ color: "var(--sage-400)" }} />
-                <h3 className="font-semibold" style={{ color: "var(--dark-brown)" }}>
+                <Clock size={18} style={{ color: "var(--teal-500)" }} />
+                <h3 className="font-semibold" style={{ color: "var(--navy)" }}>
                   Available Times for{" "}
-                  <span style={{ color: "var(--sage-500)" }}>
+                  <span style={{ color: "var(--ocean-700)" }}>
                     {format(selectedDate, "MMMM d, yyyy")}
                   </span>
                 </h3>
@@ -153,9 +153,9 @@ function BookingForm() {
                     onClick={() => setSelectedSlot(slot)}
                     className="py-2.5 rounded-xl text-sm font-medium transition-all border"
                     style={{
-                      background: selectedSlot === slot ? "var(--sage-400)" : "var(--sand-50)",
-                      color: selectedSlot === slot ? "white" : "var(--dark-brown)",
-                      borderColor: selectedSlot === slot ? "var(--sage-400)" : "var(--sand-200)",
+                      background: selectedSlot === slot ? "var(--teal-500)" : "var(--sand-50)",
+                      color: selectedSlot === slot ? "white" : "var(--navy)",
+                      borderColor: selectedSlot === slot ? "var(--teal-500)" : "var(--sand-200)",
                     }}
                   >
                     {slot}
@@ -173,13 +173,13 @@ function BookingForm() {
             className="rounded-2xl p-7"
             style={{ background: "white", border: "1px solid var(--sand-200)", boxShadow: "0 2px 12px rgba(44,26,14,0.06)" }}
           >
-            <h2 className="text-lg font-bold mb-6" style={{ color: "var(--dark-brown)" }}>
+            <h2 className="text-lg font-bold mb-6" style={{ color: "var(--navy)" }}>
               Your Details
             </h2>
 
             {/* Vessel select */}
             <div className="mb-4">
-              <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "var(--sage-500)" }}>
+              <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "var(--ocean-700)" }}>
                 <span className="flex items-center gap-1"><Ship size={12} /> Select Vessel</span>
               </label>
               <select
@@ -187,7 +187,7 @@ function BookingForm() {
                 style={{
                   background: "var(--sand-50)",
                   border: "1px solid var(--sand-200)",
-                  color: "var(--dark-brown)",
+                  color: "var(--navy)",
                 }}
                 value={selectedVessel}
                 onChange={(e) => setSelectedVessel(e.target.value)}
@@ -206,7 +206,7 @@ function BookingForm() {
             {selectedDate && selectedSlot && (
               <div
                 className="rounded-xl px-4 py-3 mb-5 text-sm flex items-center gap-2"
-                style={{ background: "var(--sage-100)", color: "var(--sage-600)" }}
+                style={{ background: "var(--ocean-50)", color: "var(--teal-600)" }}
               >
                 <Check size={15} />
                 <span>
@@ -222,7 +222,7 @@ function BookingForm() {
               { key: "phone", label: "Phone Number", type: "tel", placeholder: "+1 (345) 000-0000" },
             ].map(({ key, label, type, placeholder }) => (
               <div key={key} className="mb-4">
-                <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "var(--sage-500)" }}>
+                <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "var(--ocean-700)" }}>
                   {label}
                 </label>
                 <input
@@ -232,7 +232,7 @@ function BookingForm() {
                   style={{
                     background: "var(--sand-50)",
                     border: "1px solid var(--sand-200)",
-                    color: "var(--dark-brown)",
+                    color: "var(--navy)",
                   }}
                   value={form[key as keyof typeof form]}
                   onChange={(e) => setForm({ ...form, [key]: e.target.value })}
@@ -242,7 +242,7 @@ function BookingForm() {
             ))}
 
             <div className="mb-4">
-              <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "var(--sage-500)" }}>
+              <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "var(--ocean-700)" }}>
                 <span className="flex items-center gap-1"><Users size={12} /> Group Size</span>
               </label>
               <input
@@ -250,7 +250,7 @@ function BookingForm() {
                 min="1"
                 max="20"
                 className="w-full rounded-xl px-4 py-3 text-sm outline-none transition-all"
-                style={{ background: "var(--sand-50)", border: "1px solid var(--sand-200)", color: "var(--dark-brown)" }}
+                style={{ background: "var(--sand-50)", border: "1px solid var(--sand-200)", color: "var(--navy)" }}
                 value={form.groupSize}
                 onChange={(e) => setForm({ ...form, groupSize: e.target.value })}
                 required
@@ -258,14 +258,14 @@ function BookingForm() {
             </div>
 
             <div className="mb-6">
-              <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "var(--sage-500)" }}>
+              <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "var(--ocean-700)" }}>
                 Special Requests (optional)
               </label>
               <textarea
                 rows={3}
                 placeholder="Dietary requirements, occasion, special stops..."
                 className="w-full rounded-xl px-4 py-3 text-sm outline-none transition-all resize-none"
-                style={{ background: "var(--sand-50)", border: "1px solid var(--sand-200)", color: "var(--dark-brown)" }}
+                style={{ background: "var(--sand-50)", border: "1px solid var(--sand-200)", color: "var(--navy)" }}
                 value={form.notes}
                 onChange={(e) => setForm({ ...form, notes: e.target.value })}
               />
@@ -273,7 +273,7 @@ function BookingForm() {
 
             {/* Status messages */}
             {status === "success" && (
-              <div className="rounded-xl px-4 py-3 mb-5 flex items-center gap-2 text-sm" style={{ background: "#DCE8D8", color: "var(--sage-600)" }}>
+              <div className="rounded-xl px-4 py-3 mb-5 flex items-center gap-2 text-sm" style={{ background: "#DCE8D8", color: "var(--teal-600)" }}>
                 <Check size={16} />
                 <span>{message}</span>
               </div>
@@ -289,7 +289,7 @@ function BookingForm() {
               type="submit"
               disabled={status === "loading"}
               className="w-full py-4 rounded-xl font-semibold text-base transition-all hover:scale-[1.02] hover:shadow-md disabled:opacity-60 flex items-center justify-center gap-2"
-              style={{ background: "var(--sage-400)", color: "white" }}
+              style={{ background: "var(--teal-500)", color: "white" }}
             >
               {status === "loading" ? (
                 <><Loader2 size={18} className="animate-spin" /> Processing...</>
@@ -310,9 +310,9 @@ export default function BookingPage() {
       {/* Header */}
       <div
         className="pt-28 pb-14 px-4 text-center"
-        style={{ background: "linear-gradient(to bottom, var(--sage-600), var(--sage-500))" }}
+        style={{ background: "linear-gradient(to bottom, var(--ocean-950), var(--ocean-800))" }}
       >
-        <p className="text-xs uppercase tracking-[0.3em] font-semibold mb-3" style={{ color: "var(--sage-200)" }}>
+        <p className="text-xs uppercase tracking-[0.3em] font-semibold mb-3" style={{ color: "var(--teal-300)" }}>
           Reservations
         </p>
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">

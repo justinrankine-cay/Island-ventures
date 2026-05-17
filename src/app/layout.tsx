@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Island Ventures | Cayman Islands Charters & Transport",
+  title: "Cayman Exclusive Charters | Private Boat Charters & Tours",
   description:
-    "Explore the Cayman Islands with Island Ventures. Private boat charters, island transport, and unforgettable adventures.",
+    "Experience the best of the Cayman Islands with Cayman Exclusive Charters. Private boat charters, snorkeling tours, sunset cruises, and deep-sea fishing adventures in Grand Cayman.",
 };
 
 export default function RootLayout({
@@ -16,10 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col" style={{ background: "var(--sand-50)", color: "var(--dark-brown)" }}>
+      <body
+        className="min-h-screen flex flex-col"
+        style={{ background: "var(--sand-50)", color: "var(--navy)" }}
+      >
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

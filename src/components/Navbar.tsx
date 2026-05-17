@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Anchor } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
@@ -25,45 +25,48 @@ export default function Navbar() {
   }, []);
 
   const isHome = pathname === "/";
+  const transparent = !scrolled && isHome;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled || !isHome
-          ? "py-3 shadow-md"
-          : "py-5"
+        transparent ? "py-4" : "py-2 shadow-lg"
       }`}
       style={{
-        background:
-          scrolled || !isHome
-            ? "rgba(253,250,244,0.97)"
-            : "transparent",
-        backdropFilter: scrolled || !isHome ? "blur(8px)" : "none",
-        borderBottom: scrolled || !isHome ? "1px solid #EDD9B0" : "none",
+        background: transparent
+          ? "transparent"
+          : "rgba(7,24,40,0.97)",
+        backdropFilter: transparent ? "none" : "blur(10px)",
+        borderBottom: transparent ? "none" : "1px solid rgba(255,255,255,0.08)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <div
-            className="w-9 h-9 rounded-full flex items-center justify-center"
-            style={{ background: "var(--sage-400)" }}
+            className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
+            style={{ background: "var(--teal-500)" }}
           >
-            <Anchor size={18} color="white" strokeWidth={2} />
+            ⚓
           </div>
-          <span
-            className="text-lg font-bold tracking-wide"
-            style={{
-              color: scrolled || !isHome ? "var(--dark-brown)" : "white",
-              textShadow: !scrolled && isHome ? "0 1px 3px rgba(0,0,0,0.4)" : "none",
-            }}
-          >
-            Island Ventures
-          </span>
+          <div className="flex flex-col leading-tight">
+            <span
+              className="font-extrabold tracking-tight text-sm md:text-base"
+              style={{ color: "white" }}
+            >
+              Cayman Exclusive
+            </span>
+            <span
+              className="text-xs tracking-wider uppercase"
+              style={{ color: transparent ? "rgba(255,255,255,0.7)" : "var(--teal-300)" }}
+            >
+              Charters
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden md:flex items-center gap-6">
           {links.map(({ href, label }) => {
             const active = pathname === href;
             return (
@@ -73,77 +76,83 @@ export default function Navbar() {
                 className={`text-sm font-medium tracking-wide transition-all duration-200 relative group ${
                   active ? "font-semibold" : ""
                 }`}
-                style={{
-                  color:
-                    scrolled || !isHome
-                      ? active
-                        ? "var(--sage-500)"
-                        : "var(--dark-brown)"
-                      : "white",
-                  textShadow:
-                    !scrolled && isHome ? "0 1px 3px rgba(0,0,0,0.4)" : "none",
-                }}
+                style={{ color: active ? "var(--teal-300)" : "rgba(255,255,255,0.85)" }}
               >
                 {label}
                 <span
                   className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
                     active ? "w-full" : "w-0 group-hover:w-full"
                   }`}
-                  style={{ background: "var(--sage-400)" }}
+                  style={{ background: "var(--teal-400)" }}
                 />
               </Link>
             );
           })}
+        </nav>
+
+        {/* Right side */}
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href="tel:+13455261234"
+            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full transition-all hover:scale-105"
+            style={{ color: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.2)" }}
+          >
+            <Phone size={12} />
+            +1 (345) 526-1234
+          </a>
           <Link
             href="/booking"
-            className="ml-2 px-5 py-2 rounded-full text-sm font-semibold tracking-wide transition-all duration-200 hover:scale-105 hover:shadow-lg"
-            style={{
-              background: "var(--sage-400)",
-              color: "white",
-            }}
+            className="px-5 py-2 rounded-full text-sm font-bold tracking-wide transition-all hover:scale-105 hover:shadow-lg"
+            style={{ background: "var(--teal-500)", color: "white" }}
           >
-            Book a Charter
+            Book Now
           </Link>
-        </nav>
+        </div>
 
         {/* Mobile burger */}
         <button
-          className="md:hidden p-2 rounded-md"
+          className="md:hidden p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
-          style={{ color: scrolled || !isHome ? "var(--dark-brown)" : "white" }}
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={24} color="white" /> : <Menu size={24} color="white" />}
         </button>
       </div>
 
       {/* Mobile drawer */}
       {open && (
         <div
-          className="md:hidden absolute top-full left-0 right-0 shadow-xl py-4 px-6 flex flex-col gap-4"
-          style={{ background: "var(--sand-50)", borderTop: "1px solid #EDD9B0" }}
+          className="md:hidden absolute top-full left-0 right-0 py-4 px-5 flex flex-col gap-3"
+          style={{ background: "var(--ocean-900)", borderTop: "1px solid rgba(255,255,255,0.08)" }}
         >
           {links.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               onClick={() => setOpen(false)}
-              className="text-base font-medium py-1 border-b"
+              className="text-base font-medium py-2 border-b"
               style={{
-                color: pathname === href ? "var(--sage-500)" : "var(--dark-brown)",
-                borderColor: "var(--sand-200)",
+                color: pathname === href ? "var(--teal-300)" : "rgba(255,255,255,0.85)",
+                borderColor: "rgba(255,255,255,0.08)",
               }}
             >
               {label}
             </Link>
           ))}
+          <a
+            href="tel:+13455261234"
+            className="flex items-center gap-2 text-sm py-2"
+            style={{ color: "var(--teal-300)" }}
+          >
+            <Phone size={14} /> +1 (345) 526-1234
+          </a>
           <Link
             href="/booking"
             onClick={() => setOpen(false)}
-            className="mt-2 px-5 py-3 rounded-full text-center font-semibold"
-            style={{ background: "var(--sage-400)", color: "white" }}
+            className="mt-1 px-5 py-3 rounded-full text-center font-bold"
+            style={{ background: "var(--teal-500)", color: "white" }}
           >
-            Book a Charter
+            Book Now
           </Link>
         </div>
       )}

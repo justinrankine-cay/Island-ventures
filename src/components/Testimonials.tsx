@@ -1,26 +1,27 @@
-import { Star } from "lucide-react";
-
 const reviews = [
   {
     name: "Sarah & Michael T.",
     location: "Miami, FL",
-    text: "We booked the Sea Breeze catamaran for our anniversary and it was absolutely magical. The crew was attentive, the water was crystal clear, and Stingray City was a dream. Will be back next year!",
+    text: "We booked a private sunset charter for our anniversary and it was absolutely magical. The crew had champagne waiting on deck and knew every hidden cove around the island. 10/10 would book again.",
     rating: 5,
-    trip: "Sunset Catamaran Charter",
+    trip: "Private Sunset Charter",
+    avatar: "SM",
   },
   {
     name: "The Johnson Family",
     location: "Toronto, Canada",
-    text: "Island Ventures made our family vacation unforgettable. The kids loved the snorkeling and the captain knew exactly where to find sea turtles. Booking was super easy and the AI chat responded instantly!",
+    text: "Stingray City was a bucket-list moment for the whole family. The captain was amazing with the kids and the boat was spotless. Booking was simple and the team responded to every question in minutes.",
     rating: 5,
-    trip: "Family Snorkel Adventure",
+    trip: "Stingray City Tour",
+    avatar: "JF",
   },
   {
     name: "Robert K.",
     location: "New York, NY",
-    text: "Came for a corporate retreat and Island Ventures knocked it out of the park. Professional, punctual, and the Sunset Dream yacht was stunning. Our clients were impressed.",
+    text: "Brought 12 colleagues for a corporate team day. Professional, punctual, and the yacht was stunning. Our clients were genuinely impressed — several have already re-booked on their own time.",
     rating: 5,
     trip: "Corporate Yacht Charter",
+    avatar: "RK",
   },
 ];
 
@@ -29,42 +30,66 @@ export default function Testimonials() {
     <section className="py-20 px-4" style={{ background: "var(--sand-100)" }}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
-          <p
-            className="text-xs uppercase tracking-[0.3em] font-semibold mb-3"
-            style={{ color: "var(--sage-500)" }}
+          <span
+            className="inline-block text-xs font-bold uppercase tracking-[0.3em] px-4 py-1.5 rounded-full mb-4"
+            style={{ background: "var(--gold-100)", color: "var(--gold-600)" }}
           >
-            What Guests Say
-          </p>
+            Guest Reviews
+          </span>
           <h2
-            className="text-4xl md:text-5xl font-bold"
-            style={{ color: "var(--dark-brown)" }}
+            className="text-4xl md:text-5xl font-extrabold"
+            style={{ color: "var(--navy)" }}
           >
-            Stories from the Sea
+            What Our Guests Say
           </h2>
+          {/* Star aggregate */}
+          <div className="flex items-center justify-center gap-1 mt-4">
+            {[...Array(5)].map((_, i) => (
+              <span key={i} style={{ color: "var(--gold-500)", fontSize: "20px" }}>★</span>
+            ))}
+            <span className="ml-2 text-sm font-semibold" style={{ color: "var(--mid)" }}>
+              5.0 · 200+ reviews
+            </span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
           {reviews.map((review) => (
             <div
               key={review.name}
-              className="rounded-2xl p-7 flex flex-col gap-4 shadow-sm hover:shadow-md transition-all"
+              className="rounded-2xl p-7 flex flex-col gap-4 shadow-sm hover:shadow-lg transition-all"
               style={{ background: "white", border: "1px solid var(--sand-200)" }}
             >
-              <div className="flex gap-1">
+              {/* Stars */}
+              <div className="flex gap-0.5">
                 {Array.from({ length: review.rating }).map((_, i) => (
-                  <Star key={i} size={15} fill="var(--sand-400)" color="var(--sand-400)" />
+                  <span key={i} style={{ color: "var(--gold-500)", fontSize: "16px" }}>★</span>
                 ))}
               </div>
-              <p className="text-sm leading-relaxed italic" style={{ color: "var(--medium-brown)" }}>
+
+              <p className="text-sm leading-relaxed flex-1" style={{ color: "var(--mid)" }}>
                 &ldquo;{review.text}&rdquo;
               </p>
-              <div className="mt-auto pt-3" style={{ borderTop: "1px solid var(--sand-100)" }}>
-                <p className="font-semibold text-sm" style={{ color: "var(--dark-brown)" }}>
-                  {review.name}
-                </p>
-                <p className="text-xs" style={{ color: "var(--sage-500)" }}>
-                  {review.location} &bull; {review.trip}
-                </p>
+
+              {/* Footer */}
+              <div
+                className="flex items-center gap-3 pt-4"
+                style={{ borderTop: "1px solid var(--sand-100)" }}
+              >
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white shrink-0"
+                  style={{ background: "var(--ocean-700)" }}
+                >
+                  {review.avatar}
+                </div>
+                <div>
+                  <p className="font-bold text-sm" style={{ color: "var(--navy)" }}>
+                    {review.name}
+                  </p>
+                  <p className="text-xs" style={{ color: "var(--teal-600)" }}>
+                    {review.location} · {review.trip}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

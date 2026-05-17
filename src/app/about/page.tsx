@@ -15,12 +15,12 @@ const values = [
   {
     icon: Leaf,
     title: "Ocean Stewards",
-    body: "We operate with a zero-waste policy, use eco-friendly sunscreen on all charters, and support reef conservation.",
+    body: "We operate with a zero-waste policy, use reef-safe sunscreen on all charters, and support Cayman reef conservation.",
   },
   {
     icon: Award,
     title: "Licensed & Insured",
-    body: "All captains hold current USCG licenses. All vessels are fully insured and regularly inspected.",
+    body: "All captains hold current maritime licences. All vessels are fully insured and regularly inspected by CIAA.",
   },
 ];
 
@@ -28,17 +28,20 @@ const team = [
   {
     name: "Captain Marcus Reid",
     role: "Founder & Head Captain",
-    bio: "Born and raised in Grand Cayman, Marcus has over 20 years on the water and knows every reef, sandbar, and hidden cove.",
+    bio: "Born and raised in Grand Cayman, Marcus has 20+ years on the water and knows every reef, sandbar, and hidden cove around the island.",
+    initials: "MR",
   },
   {
     name: "Sasha Thompson",
     role: "Operations Manager",
-    bio: "Sasha keeps Island Ventures running like clockwork — from scheduling to ensuring every charter exceeds expectations.",
+    bio: "Sasha keeps Cayman Exclusive Charters running like clockwork — from scheduling to ensuring every charter exceeds expectations.",
+    initials: "ST",
   },
   {
     name: "Diego Morales",
     role: "Lead Mate & Dive Instructor",
     bio: "PADI certified and passionate about marine life, Diego turns every snorkel stop into a genuine underwater adventure.",
+    initials: "DM",
   },
 ];
 
@@ -48,22 +51,25 @@ export default function AboutPage() {
       {/* Hero */}
       <div
         className="pt-28 pb-20 px-4"
-        style={{ background: "linear-gradient(to bottom, var(--sage-600), var(--sage-500))" }}
+        style={{ background: "linear-gradient(to bottom, var(--ocean-950), var(--ocean-800))" }}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs uppercase tracking-[0.3em] font-semibold mb-3" style={{ color: "var(--sage-200)" }}>
+          <span
+            className="inline-block text-xs font-bold uppercase tracking-[0.3em] px-4 py-1.5 rounded-full mb-5"
+            style={{ background: "rgba(78,207,190,0.15)", color: "var(--teal-300)" }}
+          >
             Our Story
-          </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+          </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-white">
             Built by Caymanians,
             <br />
-            <span style={{ color: "var(--sand-200)" }}>for the World</span>
+            <span style={{ color: "var(--teal-300)" }}>for the World</span>
           </h1>
-          <p className="text-base leading-relaxed max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.85)" }}>
-            Island Ventures was born from a simple belief: the Cayman Islands deserve to be
-            shared. We started with a single boat and a passion for showing visitors the
-            real Cayman — the hidden coves, the wild dolphins, the midnight reefs, and the
-            sunsets that stop your heart.
+          <p className="text-base leading-relaxed max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.82)" }}>
+            Cayman Exclusive Charters was born from a simple belief: these islands deserve to be
+            shared. We started with a single boat and a passion for showing visitors the real
+            Cayman — the hidden coves, the wild dolphins, the midnight reefs, and the sunsets
+            that stop your heart.
           </p>
         </div>
       </div>
@@ -74,14 +80,17 @@ export default function AboutPage() {
           <div
             className="rounded-3xl p-10 md:p-14 text-center"
             style={{
-              background: "linear-gradient(135deg, var(--sand-100) 0%, var(--sand-200) 100%)",
-              border: "1px solid var(--sand-300)",
+              background: "linear-gradient(135deg, var(--ocean-950), var(--ocean-800))",
+              border: "1px solid rgba(255,255,255,0.06)",
             }}
           >
-            <p className="text-xs uppercase tracking-[0.3em] font-semibold mb-4" style={{ color: "var(--sage-500)" }}>
+            <span
+              className="inline-block text-xs font-bold uppercase tracking-[0.3em] px-4 py-1.5 rounded-full mb-5"
+              style={{ background: "rgba(78,207,190,0.15)", color: "var(--teal-300)" }}
+            >
               Our Mission
-            </p>
-            <p className="text-2xl md:text-3xl font-semibold leading-relaxed" style={{ color: "var(--dark-brown)" }}>
+            </span>
+            <p className="text-2xl md:text-3xl font-semibold leading-relaxed text-white">
               &ldquo;To connect every guest with the raw, untouched beauty of the
               Cayman Islands — safely, sustainably, and unforgettably.&rdquo;
             </p>
@@ -90,10 +99,10 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 px-4" style={{ background: "var(--sand-100)" }}>
+      <section className="py-16 px-4" style={{ background: "white" }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ color: "var(--dark-brown)" }}>
+            <h2 className="text-3xl md:text-4xl font-extrabold" style={{ color: "var(--navy)" }}>
               What We Stand For
             </h2>
           </div>
@@ -102,16 +111,16 @@ export default function AboutPage() {
               <div
                 key={title}
                 className="rounded-2xl p-7 flex flex-col gap-4"
-                style={{ background: "white", border: "1px solid var(--sand-200)" }}
+                style={{ background: "var(--sand-50)", border: "1px solid var(--sand-200)" }}
               >
                 <div
-                  className="w-11 h-11 rounded-xl flex items-center justify-center"
-                  style={{ background: "var(--sage-100)" }}
+                  className="w-12 h-12 rounded-xl flex items-center justify-center"
+                  style={{ background: "var(--teal-500)" }}
                 >
-                  <Icon size={22} style={{ color: "var(--sage-500)" }} />
+                  <Icon size={22} color="white" />
                 </div>
-                <h3 className="font-bold text-lg" style={{ color: "var(--dark-brown)" }}>{title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--medium-brown)" }}>{body}</p>
+                <h3 className="font-bold text-lg" style={{ color: "var(--navy)" }}>{title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--mid)" }}>{body}</p>
               </div>
             ))}
           </div>
@@ -122,10 +131,10 @@ export default function AboutPage() {
       <section className="py-16 px-4" style={{ background: "var(--sand-50)" }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: "var(--dark-brown)" }}>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-3" style={{ color: "var(--navy)" }}>
               Meet the Crew
             </h2>
-            <p className="text-sm" style={{ color: "var(--medium-brown)" }}>
+            <p className="text-sm" style={{ color: "var(--mid)" }}>
               Local experts who live and breathe the Cayman Islands.
             </p>
           </div>
@@ -136,24 +145,23 @@ export default function AboutPage() {
                 className="rounded-2xl overflow-hidden"
                 style={{ background: "white", border: "1px solid var(--sand-200)" }}
               >
-                {/* Avatar placeholder */}
                 <div
                   className="h-44 flex items-center justify-center"
-                  style={{ background: "linear-gradient(135deg, var(--sage-400) 0%, var(--sage-600) 100%)" }}
+                  style={{ background: "linear-gradient(135deg, var(--ocean-800) 0%, var(--ocean-950) 100%)" }}
                 >
                   <div
-                    className="w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold"
-                    style={{ background: "rgba(255,255,255,0.2)", color: "white" }}
+                    className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-extrabold text-white"
+                    style={{ background: "rgba(255,255,255,0.15)", border: "2px solid rgba(255,255,255,0.2)" }}
                   >
-                    {member.name.split(" ").map((n) => n[0]).join("")}
+                    {member.initials}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-lg mb-0.5" style={{ color: "var(--dark-brown)" }}>{member.name}</h3>
-                  <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: "var(--sage-500)" }}>
+                  <h3 className="font-extrabold text-lg mb-0.5" style={{ color: "var(--navy)" }}>{member.name}</h3>
+                  <p className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: "var(--teal-600)" }}>
                     {member.role}
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--medium-brown)" }}>{member.bio}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "var(--mid)" }}>{member.bio}</p>
                 </div>
               </div>
             ))}
@@ -164,18 +172,18 @@ export default function AboutPage() {
       {/* Stats */}
       <section
         className="py-14 px-4"
-        style={{ background: "linear-gradient(135deg, var(--sage-600) 0%, var(--sage-500) 100%)" }}
+        style={{ background: "linear-gradient(135deg, var(--ocean-950) 0%, var(--ocean-800) 100%)" }}
       >
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
             { value: "500+", label: "Charters Completed" },
-            { value: "98%", label: "5-Star Reviews" },
-            { value: "6", label: "Vessels in Fleet" },
-            { value: "10+", label: "Years Operating" },
+            { value: "200+", label: "5-Star Reviews" },
+            { value: "6",    label: "Vessels in Fleet" },
+            { value: "10+",  label: "Years Operating" },
           ].map(({ value, label }) => (
             <div key={label}>
-              <p className="text-4xl font-bold text-white mb-1">{value}</p>
-              <p className="text-sm" style={{ color: "rgba(255,255,255,0.75)" }}>{label}</p>
+              <p className="text-4xl font-extrabold mb-1" style={{ color: "var(--teal-300)" }}>{value}</p>
+              <p className="text-sm" style={{ color: "rgba(255,255,255,0.60)" }}>{label}</p>
             </div>
           ))}
         </div>
@@ -183,25 +191,25 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="py-16 px-4 text-center" style={{ background: "var(--sand-50)" }}>
-        <h2 className="text-3xl font-bold mb-4" style={{ color: "var(--dark-brown)" }}>
+        <h2 className="text-3xl font-extrabold mb-4" style={{ color: "var(--navy)" }}>
           Ready to Experience the Caymans?
         </h2>
-        <p className="text-sm mb-8 max-w-md mx-auto" style={{ color: "var(--medium-brown)" }}>
-          Let us show you why guests from around the world call Island Ventures
+        <p className="text-sm mb-8 max-w-md mx-auto" style={{ color: "var(--mid)" }}>
+          Let us show you why guests from around the world call Cayman Exclusive Charters
           the highlight of their trip.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/booking"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm transition-all hover:scale-105 hover:shadow-lg"
-            style={{ background: "var(--sage-400)", color: "white" }}
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm transition-all hover:scale-105 hover:shadow-lg"
+            style={{ background: "var(--teal-500)", color: "white" }}
           >
             Book a Charter <ArrowRight size={14} />
           </Link>
           <Link
             href="/fleet"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm transition-all hover:scale-105"
-            style={{ border: "2px solid var(--sage-400)", color: "var(--sage-500)" }}
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm transition-all hover:scale-105"
+            style={{ border: "2px solid var(--ocean-700)", color: "var(--ocean-700)" }}
           >
             Explore Our Fleet
           </Link>
