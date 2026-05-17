@@ -56,14 +56,14 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto text-center">
           <span
             className="inline-block text-xs font-bold uppercase tracking-[0.3em] px-4 py-1.5 rounded-full mb-5"
-            style={{ background: "rgba(78,207,190,0.15)", color: "var(--teal-300)" }}
+            style={{ background: "rgba(201,168,76,0.12)", color: "var(--gold-300)" }}
           >
             Our Story
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-white">
             Built by Caymanians,
             <br />
-            <span style={{ color: "var(--teal-300)" }}>for the World</span>
+            <span style={{ color: "var(--gold-300)" }}>for the World</span>
           </h1>
           <p className="text-base leading-relaxed max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.82)" }}>
             Cayman Exclusive Charters was born from a simple belief: these islands deserve to be
@@ -86,7 +86,7 @@ export default function AboutPage() {
           >
             <span
               className="inline-block text-xs font-bold uppercase tracking-[0.3em] px-4 py-1.5 rounded-full mb-5"
-              style={{ background: "rgba(78,207,190,0.15)", color: "var(--teal-300)" }}
+              style={{ background: "rgba(201,168,76,0.12)", color: "var(--gold-300)" }}
             >
               Our Mission
             </span>
@@ -115,7 +115,7 @@ export default function AboutPage() {
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: "var(--teal-500)" }}
+                  style={{ background: "var(--gold-500)" }}
                 >
                   <Icon size={22} color="white" />
                 </div>
@@ -158,7 +158,7 @@ export default function AboutPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-extrabold text-lg mb-0.5" style={{ color: "var(--navy)" }}>{member.name}</h3>
-                  <p className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: "var(--teal-600)" }}>
+                  <p className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: "var(--gold-600)" }}>
                     {member.role}
                   </p>
                   <p className="text-sm leading-relaxed" style={{ color: "var(--mid)" }}>{member.bio}</p>
@@ -182,7 +182,7 @@ export default function AboutPage() {
             { value: "10+",  label: "Years Operating" },
           ].map(({ value, label }) => (
             <div key={label}>
-              <p className="text-4xl font-extrabold mb-1" style={{ color: "var(--teal-300)" }}>{value}</p>
+              <p className="text-4xl font-extrabold mb-1" style={{ color: "var(--gold-300)" }}>{value}</p>
               <p className="text-sm" style={{ color: "rgba(255,255,255,0.60)" }}>{label}</p>
             </div>
           ))}
@@ -202,7 +202,7 @@ export default function AboutPage() {
           <Link
             href="/booking"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm transition-all hover:scale-105 hover:shadow-lg"
-            style={{ background: "var(--teal-500)", color: "white" }}
+            style={{ background: "var(--gold-500)", color: "white" }}
           >
             Book a Charter <ArrowRight size={14} />
           </Link>

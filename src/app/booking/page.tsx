@@ -97,7 +97,7 @@ function BookingForm() {
             style={{ background: "white", border: "1px solid var(--sand-200)", boxShadow: "0 2px 12px rgba(44,26,14,0.06)" }}
           >
             <div className="flex items-center gap-2 mb-5">
-              <CalendarDays size={20} style={{ color: "var(--teal-500)" }} />
+              <CalendarDays size={20} style={{ color: "var(--gold-500)" }} />
               <h2 className="text-lg font-bold" style={{ color: "var(--navy)" }}>
                 Select a Date
               </h2>
@@ -106,7 +106,7 @@ function BookingForm() {
             {/* Legend */}
             <div className="flex gap-5 mb-4 text-xs" style={{ color: "var(--mid)" }}>
               <span className="flex items-center gap-1.5">
-                <span className="inline-block w-3 h-3 rounded" style={{ background: "#DCE8D8" }} />
+                <span className="inline-block w-3 h-3 rounded" style={{ background: "#FAF3DC" }} />
                 Available
               </span>
               <span className="flex items-center gap-1.5">
@@ -138,7 +138,7 @@ function BookingForm() {
               style={{ background: "white", border: "1px solid var(--sand-200)", boxShadow: "0 2px 12px rgba(44,26,14,0.06)" }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <Clock size={18} style={{ color: "var(--teal-500)" }} />
+                <Clock size={18} style={{ color: "var(--gold-500)" }} />
                 <h3 className="font-semibold" style={{ color: "var(--navy)" }}>
                   Available Times for{" "}
                   <span style={{ color: "var(--ocean-700)" }}>
@@ -153,9 +153,9 @@ function BookingForm() {
                     onClick={() => setSelectedSlot(slot)}
                     className="py-2.5 rounded-xl text-sm font-medium transition-all border"
                     style={{
-                      background: selectedSlot === slot ? "var(--teal-500)" : "var(--sand-50)",
+                      background: selectedSlot === slot ? "var(--gold-500)" : "var(--sand-50)",
                       color: selectedSlot === slot ? "white" : "var(--navy)",
-                      borderColor: selectedSlot === slot ? "var(--teal-500)" : "var(--sand-200)",
+                      borderColor: selectedSlot === slot ? "var(--gold-500)" : "var(--sand-200)",
                     }}
                   >
                     {slot}
@@ -206,7 +206,7 @@ function BookingForm() {
             {selectedDate && selectedSlot && (
               <div
                 className="rounded-xl px-4 py-3 mb-5 text-sm flex items-center gap-2"
-                style={{ background: "var(--ocean-50)", color: "var(--teal-600)" }}
+                style={{ background: "var(--ocean-50)", color: "var(--gold-600)" }}
               >
                 <Check size={15} />
                 <span>
@@ -273,7 +273,7 @@ function BookingForm() {
 
             {/* Status messages */}
             {status === "success" && (
-              <div className="rounded-xl px-4 py-3 mb-5 flex items-center gap-2 text-sm" style={{ background: "#DCE8D8", color: "var(--teal-600)" }}>
+              <div className="rounded-xl px-4 py-3 mb-5 flex items-center gap-2 text-sm" style={{ background: "#FAF3DC", color: "var(--gold-600)" }}>
                 <Check size={16} />
                 <span>{message}</span>
               </div>
@@ -289,7 +289,7 @@ function BookingForm() {
               type="submit"
               disabled={status === "loading"}
               className="w-full py-4 rounded-xl font-semibold text-base transition-all hover:scale-[1.02] hover:shadow-md disabled:opacity-60 flex items-center justify-center gap-2"
-              style={{ background: "var(--teal-500)", color: "white" }}
+              style={{ background: "var(--gold-500)", color: "white" }}
             >
               {status === "loading" ? (
                 <><Loader2 size={18} className="animate-spin" /> Processing...</>
@@ -312,10 +312,10 @@ export default function BookingPage() {
         className="pt-28 pb-14 px-4 text-center"
         style={{ background: "linear-gradient(to bottom, var(--ocean-950), var(--ocean-800))" }}
       >
-        <p className="text-xs uppercase tracking-[0.3em] font-semibold mb-3" style={{ color: "var(--teal-300)" }}>
+        <p className="text-xs uppercase tracking-[0.3em] font-semibold mb-3" style={{ color: "var(--gold-300)" }}>
           Reservations
         </p>
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+        <h1 className="font-serif-display text-4xl md:text-6xl font-bold mb-4 text-white">
           Book Your Charter
         </h1>
         <p className="text-base max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.8)" }}>

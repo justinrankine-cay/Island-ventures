@@ -6,12 +6,13 @@ export default function BookingCTA() {
     <section
       className="py-20 px-4"
       style={{
-        background: "linear-gradient(135deg, var(--teal-600) 0%, var(--ocean-800) 100%)",
+        background: "linear-gradient(135deg, var(--ocean-900) 0%, var(--ocean-800) 100%)",
+        borderTop: "1px solid rgba(201,168,76,0.3)",
       }}
     >
       <div className="max-w-5xl mx-auto text-center">
         <h2
-          className="text-4xl md:text-5xl font-extrabold mb-5 text-white"
+          className="font-serif-display text-4xl md:text-5xl font-extrabold mb-5 text-white"
         >
           Ready to Set Sail?
         </h2>
@@ -27,7 +28,7 @@ export default function BookingCTA() {
           <Link
             href="/booking"
             className="inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full font-bold text-base transition-all hover:scale-105 hover:shadow-2xl"
-            style={{ background: "white", color: "var(--teal-700)" }}
+            style={{ background: "white", color: "var(--gold-700)" }}
           >
             Check Availability <ArrowRight size={17} />
           </Link>

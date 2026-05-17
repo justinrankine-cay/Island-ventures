@@ -35,12 +35,13 @@ export default function WhyUs() {
         <div className="text-center mb-14">
           <span
             className="inline-block text-xs font-bold uppercase tracking-[0.3em] px-4 py-1.5 rounded-full mb-4"
-            style={{ background: "rgba(78,207,190,0.15)", color: "var(--teal-300)" }}
+            style={{ background: "rgba(201,168,76,0.12)", color: "var(--gold-300)" }}
           >
             Why Choose Us
           </span>
+          <div className="gold-rule" />
           <h2
-            className="text-4xl md:text-5xl font-extrabold mb-4"
+            className="font-serif-display text-4xl md:text-5xl font-extrabold mb-4"
             style={{ color: "white" }}
           >
             The Exclusive Difference
@@ -63,12 +64,12 @@ export default function WhyUs() {
             >
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center"
-                style={{ background: "var(--teal-600)" }}
+                style={{ background: "var(--gold-600)" }}
               >
                 <Icon size={22} color="white" strokeWidth={1.8} />
               </div>
               <div>
-                <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
+                <h3 className="font-serif-display text-lg font-bold mb-2 text-white">{title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.70)" }}>
                   {body}
                 </p>
@@ -89,7 +90,7 @@ export default function WhyUs() {
             { value: "10+",  label: "Years in the Caymans" },
           ].map(({ value, label }) => (
             <div key={label}>
-              <p className="text-3xl md:text-4xl font-extrabold mb-1" style={{ color: "var(--teal-300)" }}>
+              <p className="text-3xl md:text-4xl font-extrabold mb-1" style={{ color: "var(--gold-300)" }}>
                 {value}
               </p>
               <p className="text-xs uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.55)" }}>

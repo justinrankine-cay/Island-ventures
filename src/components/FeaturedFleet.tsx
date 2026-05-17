@@ -15,7 +15,7 @@ const cardGradients: Record<string, string> = {
 
 export default function FeaturedFleet() {
   return (
-    <section className="py-20 px-4" style={{ background: "var(--sand-50)" }}>
+    <section className="py-28 px-4" style={{ background: "var(--sand-50)" }}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
@@ -26,7 +26,7 @@ export default function FeaturedFleet() {
             Our Fleet
           </span>
           <h2
-            className="text-4xl md:text-5xl font-extrabold mb-4"
+            className="font-serif-display text-4xl md:text-5xl font-extrabold mb-4"
             style={{ color: "var(--navy)" }}
           >
             Hand-Picked Vessels
@@ -59,7 +59,7 @@ export default function FeaturedFleet() {
                   </span>
                 )}
                 <div>
-                  <h3 className="text-2xl font-extrabold text-white">{item.name}</h3>
+                  <h3 className="font-serif-display text-2xl font-extrabold text-white">{item.name}</h3>
                   <p className="text-sm" style={{ color: "rgba(255,255,255,0.75)" }}>
                     {item.tagline}
                   </p>
@@ -80,13 +80,13 @@ export default function FeaturedFleet() {
                     <span>Up to <strong>{item.capacity}</strong></span>
                   </div>
                   <div className="font-bold" style={{ color: "var(--navy)" }}>
-                    From <span style={{ color: "var(--teal-600)" }}>${item.priceFrom}</span>
+                    From <span style={{ color: "var(--gold-600)" }}>${item.priceFrom}</span>
                   </div>
                 </div>
                 <Link
                   href={`/booking?vessel=${item.id}`}
                   className="mt-auto flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold transition-all hover:scale-[1.02] hover:shadow-md"
-                  style={{ background: "var(--teal-500)", color: "white" }}
+                  style={{ background: "var(--gold-500)", color: "white" }}
                 >
                   Book This Vessel <ArrowRight size={14} />
                 </Link>

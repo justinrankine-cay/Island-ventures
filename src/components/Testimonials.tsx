@@ -27,7 +27,7 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 px-4" style={{ background: "var(--sand-100)" }}>
+    <section className="py-24 px-4" style={{ background: "var(--sand-100)" }}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <span
@@ -36,8 +36,9 @@ export default function Testimonials() {
           >
             Guest Reviews
           </span>
+          <div className="gold-rule" />
           <h2
-            className="text-4xl md:text-5xl font-extrabold"
+            className="font-serif-display text-4xl md:text-5xl font-extrabold"
             style={{ color: "var(--navy)" }}
           >
             What Our Guests Say
@@ -86,7 +87,7 @@ export default function Testimonials() {
                   <p className="font-bold text-sm" style={{ color: "var(--navy)" }}>
                     {review.name}
                   </p>
-                  <p className="text-xs" style={{ color: "var(--teal-600)" }}>
+                  <p className="text-xs" style={{ color: "var(--gold-600)" }}>
                     {review.location} · {review.trip}
                   </p>
                 </div>

@@ -60,16 +60,17 @@ export default function ServicesSection() {
         <div className="text-center mb-14">
           <span
             className="inline-block text-xs font-bold uppercase tracking-[0.3em] px-4 py-1.5 rounded-full mb-4"
-            style={{ background: "var(--teal-50)", color: "var(--teal-600)" }}
+            style={{ background: "var(--gold-50)", color: "var(--gold-600)" }}
           >
             What We Offer
           </span>
+          <div className="gold-rule" />
           <h2
-            className="text-4xl md:text-5xl font-extrabold mb-4"
+            className="font-serif-display text-4xl md:text-5xl font-extrabold mb-4"
             style={{ color: "var(--navy)" }}
           >
             Experiences Made for{" "}
-            <span style={{ color: "var(--teal-500)" }}>the Caymans</span>
+            <span style={{ color: "var(--gold-500)" }}>the Caymans</span>
           </h2>
           <p className="text-base max-w-xl mx-auto" style={{ color: "var(--mid)" }}>
             From adrenaline-fuelled fishing to serene sunset sails, every charter is
@@ -93,7 +94,7 @@ export default function ServicesSection() {
                 {emoji}
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-1.5" style={{ color: "var(--navy)" }}>
+                <h3 className="font-serif-display font-bold text-lg mb-1.5" style={{ color: "var(--navy)" }}>
                   {title}
                 </h3>
                 <p className="text-sm leading-relaxed" style={{ color: "var(--mid)" }}>

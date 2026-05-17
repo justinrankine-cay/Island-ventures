@@ -128,7 +128,7 @@ function ContactForm() {
               <div className="flex items-center gap-2">
                 <div
                   className="w-7 h-7 rounded-full flex items-center justify-center"
-                  style={{ background: "var(--teal-500)" }}
+                  style={{ background: "var(--gold-500)" }}
                 >
                   <Bot size={14} color="white" />
                 </div>
@@ -141,7 +141,7 @@ function ContactForm() {
                 className="flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg transition-all"
                 style={{
                   background: copied ? "var(--ocean-50)" : "var(--sand-100)",
-                  color: copied ? "var(--teal-600)" : "var(--mid)",
+                  color: copied ? "var(--gold-600)" : "var(--mid)",
                   border: "1px solid var(--sand-200)",
                 }}
               >
@@ -283,7 +283,7 @@ function ContactForm() {
             </div>
           )}
           {status === "success" && (
-            <div className="rounded-xl px-4 py-3 mb-5 flex items-center gap-2 text-sm" style={{ background: "#DCE8D8", color: "var(--teal-600)" }}>
+            <div className="rounded-xl px-4 py-3 mb-5 flex items-center gap-2 text-sm" style={{ background: "#FAF3DC", color: "var(--gold-600)" }}>
               <Check size={15} />
               <span>Your inquiry was received! Check the AI reply on the left.</span>
             </div>
@@ -293,7 +293,7 @@ function ContactForm() {
             type="submit"
             disabled={status === "loading"}
             className="w-full py-4 rounded-xl font-semibold text-base transition-all hover:scale-[1.02] hover:shadow-md disabled:opacity-60 flex items-center justify-center gap-2"
-            style={{ background: "var(--teal-500)", color: "white" }}
+            style={{ background: "var(--gold-500)", color: "white" }}
           >
             {status === "loading" ? (
               <><Loader2 size={18} className="animate-spin" /> Generating AI Reply...</>
@@ -302,7 +302,7 @@ function ContactForm() {
             )}
           </button>
 
-          <p className="text-xs text-center mt-3" style={{ color: "var(--teal-500)" }}>
+          <p className="text-xs text-center mt-3" style={{ color: "var(--gold-500)" }}>
             Our AI assistant will draft an instant reply. Our team follows up within 1 hour.
           </p>
         </form>
@@ -318,7 +318,7 @@ export default function ContactPage() {
         className="pt-28 pb-14 px-4 text-center"
         style={{ background: "linear-gradient(to bottom, var(--ocean-950), var(--ocean-800))" }}
       >
-        <p className="text-xs uppercase tracking-[0.3em] font-semibold mb-3" style={{ color: "var(--teal-300)" }}>
+        <p className="text-xs uppercase tracking-[0.3em] font-semibold mb-3" style={{ color: "var(--gold-300)" }}>
           Contact Us
         </p>
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">

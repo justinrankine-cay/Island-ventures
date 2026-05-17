@@ -45,7 +45,7 @@ function FleetCard({ item }: { item: FleetItem }) {
           <p className="text-xs uppercase tracking-widest font-medium mb-1" style={{ color: "rgba(255,255,255,0.65)" }}>
             {item.category === "boat" ? "Charter Vessel" : item.category === "transport" ? "Island Transport" : "Water Sport"}
           </p>
-          <h3 className="text-2xl font-bold text-white">{item.name}</h3>
+          <h3 className="font-serif-display text-2xl font-bold text-white">{item.name}</h3>
           <p className="text-sm" style={{ color: "rgba(255,255,255,0.82)" }}>{item.tagline}</p>
         </div>
       </div>
@@ -62,15 +62,15 @@ function FleetCard({ item }: { item: FleetItem }) {
             <span>Up to <strong>{item.capacity}</strong> guests</span>
           </div>
           <div className="flex items-center gap-1.5 text-sm font-semibold" style={{ color: "var(--navy)" }}>
-            <DollarSign size={15} style={{ color: "var(--teal-600)" }} />
-            <span>From <strong style={{ color: "var(--teal-600)" }}>${item.priceFrom}</strong></span>
+            <DollarSign size={15} style={{ color: "var(--gold-600)" }} />
+            <span>From <strong style={{ color: "var(--gold-600)" }}>${item.priceFrom}</strong></span>
           </div>
         </div>
 
         <ul className="grid grid-cols-2 gap-y-2 gap-x-3 mb-6">
           {item.features.map((f) => (
             <li key={f} className="flex items-start gap-1.5 text-xs" style={{ color: "var(--mid)" }}>
-              <Check size={13} className="mt-0.5 shrink-0" style={{ color: "var(--teal-500)" }} />
+              <Check size={13} className="mt-0.5 shrink-0" style={{ color: "var(--gold-500)" }} />
               {f}
             </li>
           ))}
@@ -80,7 +80,7 @@ function FleetCard({ item }: { item: FleetItem }) {
           <Link
             href={`/booking?vessel=${item.id}`}
             className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold transition-all hover:scale-105 hover:shadow-md"
-            style={{ background: "var(--teal-500)", color: "white" }}
+            style={{ background: "var(--gold-500)", color: "white" }}
           >
             Book Now <ArrowRight size={14} />
           </Link>
@@ -118,11 +118,11 @@ export default function FleetPage() {
       >
         <span
           className="inline-block text-xs font-bold uppercase tracking-[0.3em] px-4 py-1.5 rounded-full mb-4"
-          style={{ background: "rgba(78,207,190,0.15)", color: "var(--teal-300)" }}
+          style={{ background: "rgba(201,168,76,0.12)", color: "var(--gold-300)" }}
         >
           Our Fleet
         </span>
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-white">
+        <h1 className="font-serif-display text-4xl md:text-6xl font-extrabold mb-4 text-white">
           Choose Your Adventure
         </h1>
         <p className="text-base max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
@@ -143,10 +143,10 @@ export default function FleetPage() {
               onClick={() => setActiveCategory(id)}
               className="px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200"
               style={{
-                background: activeCategory === id ? "var(--teal-500)" : "var(--sand-100)",
+                background: activeCategory === id ? "var(--gold-500)" : "var(--sand-100)",
                 color: activeCategory === id ? "white" : "var(--navy)",
                 border: "1px solid",
-                borderColor: activeCategory === id ? "var(--teal-500)" : "var(--sand-200)",
+                borderColor: activeCategory === id ? "var(--gold-500)" : "var(--sand-200)",
               }}
             >
               {label}
@@ -176,10 +176,11 @@ export default function FleetPage() {
       <div
         className="py-14 px-4 text-center"
         style={{
-          background: "linear-gradient(135deg, var(--teal-600) 0%, var(--ocean-800) 100%)",
+          background: "linear-gradient(135deg, var(--ocean-900) 0%, var(--ocean-800) 100%)",
+          borderTop: "1px solid rgba(201,168,76,0.3)",
         }}
       >
-        <h2 className="text-2xl font-extrabold mb-3 text-white">
+        <h2 className="font-serif-display text-2xl font-extrabold mb-3 text-white">
           Don&apos;t see what you&apos;re looking for?
         </h2>
         <p className="text-sm mb-6" style={{ color: "rgba(255,255,255,0.75)" }}>
@@ -188,7 +189,7 @@ export default function FleetPage() {
         <Link
           href="/contact"
           className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm transition-all hover:scale-105 hover:shadow-xl"
-          style={{ background: "white", color: "var(--teal-700)" }}
+          style={{ background: "white", color: "var(--gold-700)" }}
         >
           Contact Us <ArrowRight size={14} />
         </Link>
