@@ -66,7 +66,7 @@ function ContactForm() {
     <div className="max-w-6xl mx-auto py-14 px-4 grid grid-cols-1 lg:grid-cols-2 gap-10">
       {/* Left: contact info */}
       <div>
-        <h2 className="text-2xl font-bold mb-4" style={{ color: "var(--navy)" }}>
+        <h2 className="font-serif-display text-2xl font-bold mb-4" style={{ color: "var(--navy)" }}>
           Get in Touch
         </h2>
         <p className="text-sm leading-relaxed mb-8" style={{ color: "var(--mid)" }}>
@@ -321,7 +321,7 @@ export default function ContactPage() {
         <p className="text-xs uppercase tracking-[0.3em] font-semibold mb-3" style={{ color: "var(--gold-300)" }}>
           Contact Us
         </p>
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+        <h1 className="font-serif-display text-4xl md:text-6xl font-bold mb-4 text-white">
           Let&apos;s Plan Your Trip
         </h1>
         <p className="text-base max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.8)" }}>

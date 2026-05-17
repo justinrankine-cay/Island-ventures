@@ -60,7 +60,7 @@ export default function AboutPage() {
           >
             Our Story
           </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-white">
+          <h1 className="font-serif-display text-4xl md:text-6xl font-extrabold mb-6 text-white">
             Built by Caymanians,
             <br />
             <span style={{ color: "var(--gold-300)" }}>for the World</span>
@@ -102,7 +102,7 @@ export default function AboutPage() {
       <section className="py-16 px-4" style={{ background: "white" }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold" style={{ color: "var(--navy)" }}>
+            <h2 className="font-serif-display text-3xl md:text-4xl font-extrabold" style={{ color: "var(--navy)" }}>
               What We Stand For
             </h2>
           </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
                 >
                   <Icon size={22} color="white" />
                 </div>
-                <h3 className="font-bold text-lg" style={{ color: "var(--navy)" }}>{title}</h3>
+                <h3 className="font-serif-display font-bold text-lg" style={{ color: "var(--navy)" }}>{title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "var(--mid)" }}>{body}</p>
               </div>
             ))}
@@ -131,7 +131,7 @@ export default function AboutPage() {
       <section className="py-16 px-4" style={{ background: "var(--sand-50)" }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-3" style={{ color: "var(--navy)" }}>
+            <h2 className="font-serif-display text-3xl md:text-4xl font-extrabold mb-3" style={{ color: "var(--navy)" }}>
               Meet the Crew
             </h2>
             <p className="text-sm" style={{ color: "var(--mid)" }}>
@@ -157,7 +157,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-extrabold text-lg mb-0.5" style={{ color: "var(--navy)" }}>{member.name}</h3>
+                  <h3 className="font-serif-display font-extrabold text-lg mb-0.5" style={{ color: "var(--navy)" }}>{member.name}</h3>
                   <p className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: "var(--gold-600)" }}>
                     {member.role}
                   </p>
@@ -191,7 +191,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="py-16 px-4 text-center" style={{ background: "var(--sand-50)" }}>
-        <h2 className="text-3xl font-extrabold mb-4" style={{ color: "var(--navy)" }}>
+        <h2 className="font-serif-display text-3xl font-extrabold mb-4" style={{ color: "var(--navy)" }}>
           Ready to Experience the Caymans?
         </h2>
         <p className="text-sm mb-8 max-w-md mx-auto" style={{ color: "var(--mid)" }}>
