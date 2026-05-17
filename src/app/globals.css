@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
 :root {
   /* Ocean blues */
@@ -23,10 +24,13 @@
   --teal-50:  #E8F8F6;
 
   /* Gold */
+  --gold-700: #9A7120;
   --gold-600: #B8871E;
-  --gold-500: #D4A843;
-  --gold-400: #E0C060;
-  --gold-100: #FBF0D0;
+  --gold-500: #C9A84C;
+  --gold-400: #D4B96A;
+  --gold-300: #E2CC8E;
+  --gold-100: #FAF3DC;
+  --gold-50:  #FDFAEF;
 
   /* Neutrals */
   --sand-50:  #FAFAF8;
@@ -46,8 +50,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
   scroll-behavior: smooth;
+}
+.font-serif-display {
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 /* ── Animations ── */
@@ -67,6 +74,14 @@ body {
 .animate-fade-in-up  { animation: fadeInUp  0.8s ease-out forwards; }
 .animate-fade-in     { animation: fadeIn    1.2s ease-out forwards; }
 .animate-pulse-soft  { animation: pulse-soft 2.4s ease-in-out infinite; }
+
+/* ── Gold divider ── */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-500), transparent);
+  width: 80px;
+  margin: 0 auto 1.5rem;
+}
 
 /* ── React Calendar overrides ── */
 .react-calendar {

@@ -42,27 +42,13 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0">
-          <div
-            className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
-            style={{ background: "var(--teal-500)" }}
-          >
-            ⚓
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span
-              className="font-extrabold tracking-tight text-sm md:text-base"
-              style={{ color: "white" }}
-            >
-              Cayman Exclusive
-            </span>
-            <span
-              className="text-xs tracking-wider uppercase"
-              style={{ color: transparent ? "rgba(255,255,255,0.7)" : "var(--teal-300)" }}
-            >
-              Charters
-            </span>
-          </div>
+        <Link href="/" className="flex items-center shrink-0">
+          <img
+            src="/images/logo.png"
+            alt="Cayman Exclusive Charters"
+            className="h-10 w-auto"
+            style={{ filter: "brightness(0) invert(1)" }}
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -76,14 +62,14 @@ export default function Navbar() {
                 className={`text-sm font-medium tracking-wide transition-all duration-200 relative group ${
                   active ? "font-semibold" : ""
                 }`}
-                style={{ color: active ? "var(--teal-300)" : "rgba(255,255,255,0.85)" }}
+                style={{ color: active ? "var(--gold-300)" : "rgba(255,255,255,0.85)" }}
               >
                 {label}
                 <span
                   className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
                     active ? "w-full" : "w-0 group-hover:w-full"
                   }`}
-                  style={{ background: "var(--teal-400)" }}
+                  style={{ background: "var(--gold-400)" }}
                 />
               </Link>
             );
@@ -103,7 +89,7 @@ export default function Navbar() {
           <Link
             href="/booking"
             className="px-5 py-2 rounded-full text-sm font-bold tracking-wide transition-all hover:scale-105 hover:shadow-lg"
-            style={{ background: "var(--teal-500)", color: "white" }}
+            style={{ background: "var(--gold-500)", color: "white" }}
           >
             Book Now
           </Link>
@@ -132,7 +118,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="text-base font-medium py-2 border-b"
               style={{
-                color: pathname === href ? "var(--teal-300)" : "rgba(255,255,255,0.85)",
+                color: pathname === href ? "var(--gold-300)" : "rgba(255,255,255,0.85)",
                 borderColor: "rgba(255,255,255,0.08)",
               }}
             >
@@ -142,7 +128,7 @@ export default function Navbar() {
           <a
             href="tel:+13455261234"
             className="flex items-center gap-2 text-sm py-2"
-            style={{ color: "var(--teal-300)" }}
+            style={{ color: "var(--gold-300)" }}
           >
             <Phone size={14} /> +1 (345) 526-1234
           </a>
@@ -150,7 +136,7 @@ export default function Navbar() {
             href="/booking"
             onClick={() => setOpen(false)}
             className="mt-1 px-5 py-3 rounded-full text-center font-bold"
-            style={{ background: "var(--teal-500)", color: "white" }}
+            style={{ background: "var(--gold-500)", color: "white" }}
           >
             Book Now
           </Link>

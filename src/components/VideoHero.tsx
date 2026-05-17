@@ -32,9 +32,9 @@ export default function VideoHero() {
         <div
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6 animate-fade-in"
           style={{
-            background: "rgba(13,150,136,0.25)",
-            border: "1px solid rgba(78,207,190,0.5)",
-            color: "var(--teal-300)",
+            background: "rgba(201,168,76,0.15)",
+            border: "1px solid rgba(201,168,76,0.6)",
+            color: "var(--gold-300)",
             animationDelay: "0.2s",
             opacity: 0,
           }}
@@ -43,7 +43,7 @@ export default function VideoHero() {
         </div>
 
         <h1
-          className="text-5xl md:text-7xl font-extrabold leading-tight mb-5 animate-fade-in-up"
+          className="font-serif-display text-5xl md:text-7xl font-extrabold leading-tight mb-5 animate-fade-in-up"
           style={{
             color: "white",
             textShadow: "0 2px 24px rgba(7,24,40,0.6)",
@@ -53,7 +53,7 @@ export default function VideoHero() {
         >
           Exclusive Charters
           <br />
-          <span style={{ color: "var(--teal-300)" }}>Built for You</span>
+          <span style={{ color: "var(--gold-300)" }}>Built for You</span>
         </h1>
 
         <p
@@ -90,7 +90,7 @@ export default function VideoHero() {
           <Link
             href="/booking"
             className="px-9 py-4 rounded-full font-bold text-base tracking-wide transition-all hover:scale-105 hover:shadow-2xl"
-            style={{ background: "var(--teal-500)", color: "white" }}
+            style={{ background: "var(--gold-500)", color: "white" }}
           >
             Book Your Charter
           </Link>

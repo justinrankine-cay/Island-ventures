@@ -15,8 +15,8 @@ const services = [
     title: "Stingray City Tours",
     desc: "Swim with wild stingrays at the world-famous sandbar in the North Sound.",
     href: "/fleet",
-    color: "var(--teal-600)",
-    light: "var(--teal-50)",
+    color: "var(--gold-600)",
+    light: "var(--gold-50)",
   },
   {
     emoji: "🌅",
@@ -39,8 +39,8 @@ const services = [
     title: "Snorkeling Adventures",
     desc: "Explore vibrant coral reefs, sea turtles, and underwater wonders around the island.",
     href: "/fleet",
-    color: "var(--teal-500)",
-    light: "var(--teal-50)",
+    color: "var(--gold-500)",
+    light: "var(--gold-50)",
   },
   {
     emoji: "🏝️",
@@ -54,7 +54,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 px-4" style={{ background: "white" }}>
+    <section className="py-28 px-4" style={{ background: "white" }}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
