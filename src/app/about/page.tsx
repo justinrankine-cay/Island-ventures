@@ -1,5 +1,29 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Anchor, Heart, Leaf, Award } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About Island Ventures | Cayman Islands Charter Experts Since 2014",
+  description:
+    "Born and raised in Grand Cayman, Island Ventures was founded by local captain Marcus Reid with 20+ years on the water. Discover our story, mission, and the crew behind the Cayman Islands' most trusted charter company.",
+  keywords: [
+    "Island Ventures Cayman story",
+    "Grand Cayman local charter company",
+    "Cayman Islands charter experts",
+    "licensed Cayman boat captain",
+    "eco-friendly charters Cayman",
+    "trusted Cayman Islands boat company",
+  ],
+  openGraph: {
+    title: "About Island Ventures | Grand Cayman's Local Charter Experts",
+    description:
+      "Founded by a born-and-raised Caymanian captain with 20+ years on the water. Island Ventures is Grand Cayman's most trusted private charter company.",
+    url: "https://islandventures.ky/about",
+  },
+  alternates: {
+    canonical: "https://islandventures.ky/about",
+  },
+};
 
 const values = [
   {
